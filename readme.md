@@ -1,6 +1,8 @@
 # Proxmox to Discord Notifications
 Made a very simple, hacky way of getting my Proxmox server mail notifications to Discord, as I did not want to deal with setting up SMTP or use a relay service for it from my home. 
 
+Mails will get send by sendmail MTA from Proxmox. Which is then picked up by the /root/.forward which is typically used for adding extra e-mail addresses, to make sure important system messages aren't missed. We are just abusing this to pipe the contents of the email into a shell script.
+
 Make sure the emails from proxmox are always going to root@localhost.
 
 Tested on Proxmox 8.1 with Debian 12. 
@@ -22,11 +24,11 @@ Tested on Proxmox 8.1 with Debian 12.
 2. vim or nano into the script, paste the Webhook URL in the "WEBHOOK_URL" variable.
 3. Change the SERVERNAME if you wish.
 4. Save the file.
-5. Run `chmod +x discord.sh` (change discord.sh if you saved it as different name.
+5. Run `chmod +x discord.sh` (change discord.sh if you saved it as different name).
 
 ## Modify /root/.forward
 1. vim or nano into `/root/.forward`.
-2. add `|/usr/bin/discord.sh` to a new line.
+2. add `|/usr/bin/discord.sh` (change discord.sh if you saved it as different name) to a new line.
 3. Save file.
 
 Use at your own risk. 
