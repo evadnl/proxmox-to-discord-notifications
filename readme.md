@@ -1,5 +1,5 @@
 # Proxmox to Discord Notifications
-Made a very simple, hacky way of getting my Proxmox server notifications to Discord, as I did not want to deal with setting up SMTP or use a relay service for it from my home. 
+Made a very simple, hacky way of getting my Proxmox server mail notifications to Discord, as I did not want to deal with setting up SMTP or use a relay service for it from my home. 
 
 Make sure the emails from proxmox are always going to root@localhost.
 
