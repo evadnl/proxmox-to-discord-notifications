@@ -33,4 +33,4 @@ Tested on Proxmox 8.1 with Debian 12.
 
 Use at your own risk. 
 
-![Proxmox to Discord Notification](./proxmox-discord-mail-noticiation.png)
+![Proxmox to Discord Notification](./proxmox-discord-mail-notification.png)
